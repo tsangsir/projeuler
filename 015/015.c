@@ -1,7 +1,8 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 long long **routes;
-int x_dim = 10;
+int x_dim = 20;
 int y_dim = 20;
 
 void init_routes() {
