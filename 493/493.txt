@@ -1,0 +1,28 @@
+Colors	Prob
+0	0
+1	0
+2	7C2 * 18C18/70C20
+3	7C3 * 27C17/70C20
+4	7C4 * 36C16/70C20
+5	7C5 * 45C15/70C20
+6	7C6 * 54C14/70C20
+7	7C7 * 63C13/70C20
+
+(
+binomial(7,2) * binomial(18,18) + binomial(7,3) * binomial(27,17) + binomial(7,4) * binomial(36,16) +
+binomial(7,5) * binomial(45,15) + binomial(7,6) * binomial(65,14) + binomial(7,7) * binomial(63,13) 
+)/binomial(70,20)
+
+(256070793846+444658561700535)/binomial(70,20)
+
+
+
+
+(
+binomial(7,2) * binomial(18,18) * binomial(20,2) + binomial(7,3) * binomial(27,17) * binomial(20,3) + 
+binomial(7,4) * binomial(36,16) * binomial(20,4) + binomial(7,5) * binomial(45,15) * binomial(20,5) + 
+binomial(7,6) * binomial(54,14) * binomial(20,6) + binomial(7,7) * binomial(63,13) * binomial(20,7)
+)/binomial(70,20)
+
+
+(336607775490+113522548304394306+1692047599321806720)/binomial(70,20)

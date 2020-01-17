@@ -1,0 +1,14 @@
+Solved this in 2 ways:
+
+1) Trial and Error:
+There are 1200 months total in 100 years.
+There should be around 1200 / 7 = 171 Sundays on the 1st.
+So I planned to try 171, 172, 170... until correct. It tuned out the 1st trial gave the correct answer.
+
+2) Linux bash shell + a bunch of shell utilities
+
+for x in `seq 1901 2000`; do 
+for y in `seq 1 12`; do 
+cal $y $x; 
+done 
+done |grep '^ 1' |wc -1

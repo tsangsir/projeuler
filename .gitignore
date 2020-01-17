@@ -1,2 +1,9 @@
 *.log
 a.out
+a.exe
+*~
+*stackdump
+octave-core
+*bak
+*backup
+

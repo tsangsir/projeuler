@@ -1,0 +1,28 @@
+create table n (
+seq number,
+digit char(1)
+);
+
+declare
+    n number := 1;
+    ns varchar2(100);
+    seq number := 1;
+    i number;
+begin
+    while seq <=1000000 loop
+        ns := to_char(n);
+        for i in 1..length(ns) loop
+            insert into n values (seq, substr(ns,i,1));
+            seq := seq + 1;
+        end loop;
+        n := n + 1;
+    end loop;
+end;
+
+
+
+select * from n order by seq desc
+
+select * from n
+where seq in (1, 10, 100, 1000, 10000, 100000, 1000000)
+

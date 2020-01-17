@@ -1,0 +1,15 @@
+Brutal force in SQL (Oracle style), took < .1 sec
+
+[code=SQL]with n as (
+select rownum n from all_objects
+where rownum <500
+)
+select a.n+b.n+c.n, count(*)
+from n a, n b, n c
+where a.n * a.n + b.n * b.n = c.n * c.n
+and a.n+b.n+c.n <= 1000
+and a.n <= b.n
+group by a.n+b.n+c.n
+order by count(*) desc;
+[/code]
+
