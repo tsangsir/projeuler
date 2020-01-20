@@ -87,7 +87,7 @@ int * prime_factorize(int x) {
 }
 
 int main(int argc, char * argv[]){
-	int n = 60;
+	int n = 10000;
 	int i;
 
 	int* pf = prime_factorize(n);

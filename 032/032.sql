@@ -1,3 +1,5 @@
+set timing on
+
 with rng as (select rownum r, ceil(10000/rownum) f from all_objects
 where rownum <= 10000),
 prd as (
