@@ -3,23 +3,23 @@
 void initialize(int slots[]) {
 	int i;
 	slots[0]=1;
-	for (i=1;i<=9999;i++) {
+	for (i=1;i<=999;i++) {
 		slots[i]=0;
 	}
 }
 
 int main(int argc, char *argv[]) {
-	int slots[10000] ;
+	int slots[1000] ;
 	int i;
 	int longest=0;
 	int winner;
 	int tmp;
 	int dig_cnt;
 
-	for (i=1; i <10000; i++) {
+	for (i=1; i <1000; i++) {
 		dig_cnt = 0;
 		initialize(slots);
-		tmp = 10000 % i;
+		tmp = 1000 % i;
 		//printf("%d: ", i);
 		while(slots[tmp]==0) {
 			slots[tmp]=1;
