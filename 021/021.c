@@ -52,14 +52,14 @@ int * prime_factorize(int x) {
 			if (( x % i) == 0) {
 				if (prime_factor_count[x] % 10 == 9) {
 				prime_factors[x] = realloc(prime_factors[x],
-					sizeof(int)*prime_factor_count[x] + 10);
+					sizeof(int)*(prime_factor_count[x] + 10));
 				}
 				prime_factors[x][++prime_factor_count[x]] = i;
 				pf=prime_factorize(x/i);
 				for (ii=0; pf[ii] != -1; ii++) {
 					if (prime_factor_count[x] % 10 == 9) {
 					prime_factors[x] = realloc(prime_factors[x],
-						sizeof(int)*prime_factor_count[x] + 10);
+						sizeof(int)*(prime_factor_count[x] + 10));
 					}
 					prime_factors[x][++prime_factor_count[x]] = pf[ii];
 				}
@@ -75,7 +75,7 @@ int * prime_factorize(int x) {
 		prime_factor_count[x]++;
 		if (prime_factor_count[x] % 10 == 9) {
 			prime_factors[x] = realloc(prime_factors[x],
-				sizeof(int)*prime_factor_count[x] + 10);
+				sizeof(int)*(prime_factor_count[x] + 10));
 		}
 		prime_factors[x][prime_factor_count[x]]=-1;
 	}
