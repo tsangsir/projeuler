@@ -2,5 +2,5 @@ Noting that to minimum n/Totient n, n must have many prime factor
 
 The solution becomes finding n < 1000000 having most prime factoers, i.e., multiplication of prime numbers up to 1000000
 
-And it the solution is multiply up to 2*3*5*7*11*13=510510
+And it the solution is multiply up to 2*3*5*7*11*13*17=510510
 
