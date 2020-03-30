@@ -1,0 +1,20 @@
+918273645 is 1 to 9 pandigital, but rejected as answer 
+=> Answer must start with at least 91
+=> Answer cannot start with 95 or above, because 95*2 will have another 9, conflict with leading 9
+
+For 2-digit number, 9n
+9n * 1 => 2 digit; 9n * 2 => 3 digit; 9n * 4 => 3 digit; 9n * 5 => 3 digits
+=> Cannot be an answer because product concatentation will not be 9 digit
+
+Similarly, 3-digit numbers are rejected
+
+Answer must be 4-digit, because for 5-digit, the concatenated product will have > 9 digit
+
+For 4-digit numbers, the answer should satisfy
+- between 9487 and 9183
+- has no 1, 8 (so starting point become 9476), which will be produced when multipy with 2
+- has no 0, by definition 
+- has no 5, which produces 0 when multiple with 2
+
+
+By trial and error, answer was found

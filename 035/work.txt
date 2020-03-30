@@ -1,0 +1,27 @@
+select sum(c) from (
+select rmin, count(*) c from (
+select rotate_min(p) rmin from euler_primes
+where p < 100
+)
+group by rmin
+having count(*) = length(rmin)
+union all
+select null, count(*) from euler_primes
+where same_digits(p)='Y'
+and p > 10
+);
+
+SQL> select rotate_min(1133) from dual;
+ROTATE_MIN(1133)
+--------------------------------------------------------------------------------
+1133
+Elapsed: 00:00:00.00
+SQL> ed
+Wrote file afiedt.buf
+  1* select rotate_min(1331) from dual
+SQL> /
+ROTATE_MIN(1331)
+--------------------------------------------------------------------------------
+1331
+Elapsed: 00:00:00.00
+SQL>
